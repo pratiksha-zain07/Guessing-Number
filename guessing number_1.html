@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        
+        <style>
+           
+            body{
+                background:black;
+                text-align: center;
+                font-size: x-large;
+                margin-top: 15%;
+                color: white;
+            }
+            input,button{
+                font-size: x-large;
+                text-align: center;
+                border-radius: 20px;
+            }
+        </style>
+        </head>
+        <body>
+            <p >guess the number between 1 and 100 </p>
+            <input id="in" type="number">
+            <button onclick="findnumber()">check</button>
+            <p id="out">result</p>
+        <script>
+          var guess=Math.floor(Math.random()*100)+1;
+          function findnumber(){
+              var num=parseInt(document.getElementById("in").value)
+              if(num===guess)
+              document.getElementById("out").innerHTML="congrats!Got it."
+              else if(num>guess)
+              document.getElementById("out").innerHTML="guess small number."
+              else if(num<guess)
+              document.getElementById("out").innerHTML="guess large number."
+          }
+
+        </script>
+        </body>
+    
+</html>
